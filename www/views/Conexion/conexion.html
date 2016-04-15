@@ -1,0 +1,49 @@
+<ion-view view-title="Conexion">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" ng-controller="conexionController as con" overflow-scroll="false" >
+    
+        <div class="spacer" style="width: 283px; height: 24px;"></div>
+            <div>
+            <ion-toggle toggle-class="toggle-assertive" ng-model="con.start" ng-change="con.ui.onStartScanButton()">Escanear dispositivos <ion-spinner ng-if="con.start" icon="bubbles" class="spinner-assertive"></ion-spinner></ion-toggle>
+        
+            <!--<div class="spacer" style="width: 283px; height: 265px;"></div>-->
+           
+                
+                
+                
+                
+            <!--<div class="list">
+                <ion-toggle ng-model="vm.foo" ng-checked="vm.foo" ng-change="vm.setFoo()"> Foo </ion-toggle>
+                <ion-toggle ng-model="vm.bar" ng-checked="{{vm.bar}}" ng-change="vm.setBar()"> Bar </ion-toggle>
+            </div>
+        <div class="item">
+                Foo: {{vm.foo}} <br/> Bar: {{vm.bar}}
+        </div>-->
+                
+            <!--<script>
+            $('#testcheck').change(function(){
+                                   this.checked? $scope.ui.onStartScanButton(): $scope.ui.onStopScanButton();
+                                   });
+            </script>-->
+        
+        <ion-list> 
+            <ion-item ng-repeat="item in devicelist" ng-model="con.ui.displayDeviceList">
+                   <b>Device Name:</b>{{ item.nombre }} 
+                   <b>Device IP:</b>{{ item.ip }}
+                
+            </ion-item>
+            <ion-item>
+                    Sal lista
+            </ion-item>
+            <!--<ion-item class="button" ng-repeat="item in items">
+                    Item {{ item.id }}
+            </ion-item>-->
+        </ion-list>
+        </div>
+        
+
+
+            <!--<a ui-sref="inicio" class="button button-assertive button-full  icon-left ion-android-arrow-back">Atrás</a>
+            <a ui-sref="page" class="button button-assertive button-full  icon-right ion-ios-arrow-forward">Comenzar</a>
+            </div>-->
+    </ion-content>
+</ion-view>

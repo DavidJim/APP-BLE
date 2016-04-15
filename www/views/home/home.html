@@ -1,0 +1,58 @@
+<ion-view view-title="Perfil">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" overflow-scroll="false">
+        <div class="hero slide-up" style="background-image: url('img/uja.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/david.jpg');"></div>
+                <h3><a class="light">David Jiménez</a></h3>
+                <h4></h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.actividad" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Activity
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-podium"></i> Stadistics
+            </a>
+            <a ui-sref="app.calendario" class="tab-item">
+                <i class="icon ion-calendar"></i> Calendar
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x">Tus datos</h4>
+        
+        <div class="list card">
+
+              <a href="#" class="item item-icon-left" ng-click="addPeso()">
+                <i class="icon ion-heart"></i>
+                Peso
+                <span class="badge badge-assertive" ng-repeat="item in peso">{{item.peso}} kg</span>
+              </a>
+            
+              <a href="#" class="item item-icon-left" ng-click="addEstatura()">
+                <i class="icon ion-arrow-resize"></i>
+                Estatura
+                <span class="badge badge-assertive" ng-repeat="item in estatura">{{item.estatura}} cm</span>
+              </a>
+            
+            
+
+<!--
+              <a href="#" class="item item-icon-left" ng-click="showPopupEst()">
+                <i class="icon ion-arrow-resize"></i>
+                Estatura
+                <span class="badge badge-assertive">{{ data.est }} cm</span>
+              </a>
+-->
+
+              <a href="#" class="item item-icon-left" ng-click="showPopupGen()">
+                <i class="icon ion-person-stalker"></i>
+                Género
+                <span class="badge badge-assertive"> {{data.clientGenero}}
+                </span>
+              </a>
+        </div>
+         <div class="padding">
+            <button class="button icon-left ion-ios-loop-strong button-block button-assertive " ui-sref='app.modificar'>Modificar</button></div>
+        <!--Estatura,Peso,Genero,Boton de modificar-->
+    </ion-content>
+</ion-view>

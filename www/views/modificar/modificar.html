@@ -1,0 +1,33 @@
+<ion-view view-title="Modificar">
+
+  <ion-content ng-class="{expanded:$scope.isExpanded}" overflow-scroll="false">
+    <div class="text-center padding">
+      <i class="icon ion-ios-infinite larger assertive"></i>
+    </div>
+    <form novalidate name="modificarForm">
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Peso(kg)</span>
+        <input name="txtpeso" placeholder="Peso">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Estatura(cm)</span>
+        <input name="txtestatura" placeholder="Estatura">
+      </label>
+      <ion-list>
+        <ion-radio ng-model="choice" ng-value="'Masculino'"><i class="icon-large ion-man"></i> Masculino</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Femenino'"><i class="icon-large ion-woman"></i> Femenino</ion-radio>
+      </ion-list>
+     </div>
+      <!--<div class="form-errors" ng-messages="forgotForm.txtemail.$error" ng-if="forgotForm.$submitted">
+        <div class="form-error" ng-message="required">This field is required</div>
+        <div class="form-error" ng-message="email">This field is must be an email.</div>
+        <div class="form-error" ng-message="minlength">This field is must be at least 5 characters.</div>
+        <div class="form-error" ng-message="maxlength">This field is must be less than 30 characters.</div>
+      </div>-->
+      <div class="padding-top">
+      <input type="submit" value="Modificar" class="button button-block button-assertive"/>
+  </form>
+    </div>
+  </ion-content>
+</ion-view>
